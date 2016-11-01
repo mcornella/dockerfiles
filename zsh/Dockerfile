@@ -2,10 +2,11 @@ FROM alpine
 MAINTAINER Marc Cornellà <marc.cornella@live.com>
 
 RUN apk add --no-cache \
+		sudo \
+		less \
 		curl \
 		git \
-		zsh \
-		sudo
+		zsh
 
 ARG USER=user
 ENV HOME /home/$USER
