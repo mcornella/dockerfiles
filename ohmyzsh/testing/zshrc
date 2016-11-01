@@ -1,5 +1,6 @@
 export PATH=~/bin:$PATH
 export LC_ALL=C.UTF-8
+export LESS=-RFX
 
 export ZSH=~/ohmyzsh
 : ${ZSH_THEME:=robbyrussell}

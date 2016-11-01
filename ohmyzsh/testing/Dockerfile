@@ -7,7 +7,8 @@ ENV HOME /home/$USER
 USER $USER
 WORKDIR $HOME
 
-RUN git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $HOME/ohmyzsh
 COPY zshrc $HOME/.zshrc
+RUN git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $HOME/ohmyzsh && \
+	chown $USER:$USER $HOME/.zshrc
 
 ENTRYPOINT ["zsh"]
