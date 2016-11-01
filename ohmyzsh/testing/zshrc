@@ -1,0 +1,19 @@
+export PATH=~/bin:$PATH
+export LC_ALL=C.UTF-8
+
+export ZSH=~/ohmyzsh
+: ${ZSH_THEME:=robbyrussell}
+
+DISABLE_AUTO_UPDATE="true"
+ZSH_COMPDUMP="$ZSH/cache/.zcompdump"
+
+plugins=(git)
+
+source "$ZSH/oh-my-zsh.sh"
+
+# User configuration
+alias ls='ls --color -hF'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -l'
+alias lla='ls -lA'
